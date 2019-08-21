@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>
+      Fuentes de Información
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+  <ion-item color="dark">
+    <ion-label>Fuente:</ion-label>
+    <ion-select   interface="popover" [value]="fuente" (ionChange)="cambioFuente( $event )">
+    <ion-select-option  *ngFor="let fuente of fuentes" selected>  {{fuente}} </ion-select-option>
+      
+    </ion-select>
+  </ion-item>
+  <app-noticias [articulos]="noticias"></app-noticias>
+</ion-content>
